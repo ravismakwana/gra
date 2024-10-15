@@ -1,0 +1,101 @@
+@import "essentials";
+/* Single Product page style start */
+.single-product {
+  .summary {
+    table.shop_attributes {
+      tr {
+        &:last-child {
+          &:hover {
+            th {
+              background: var(--bs-primary);
+            }
+          }
+
+          th {
+            &:first-child {
+              background: var(--bs-primary) !important;
+              color: #fff;
+            }
+
+            display: block;
+            border: 5px dotted #000;
+
+          }
+
+          td {
+            background-color: #000;
+            color: #fff;
+            vertical-align: middle;
+
+          }
+        }
+
+        th {
+          width: 180px;
+        }
+      }
+    }
+  }
+
+  .btn-color-orange {
+    svg {
+      &:hover {
+        fill: var(--bs-primary);
+        color: red;
+      }
+    }
+  }
+
+  &.woocommerce {
+    p {
+      &.stars {
+        a {
+          color: #F8A41D;
+        }
+      }
+    }
+
+    .star-rating {
+      span {
+        color: #F8A41D;
+      }
+    }
+    .related {
+      .products {
+        .star-rating {
+          margin: 1rem auto;
+        }
+        .woo-title {
+          font-size: 1rem;
+        }
+        .card {
+          a {
+            img {
+              border: 0 none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .product-author {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    width: fit-content;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 415px;
+  }
+}
+.primary-sidebar {
+  .widget {
+    ul {
+      padding-left: 15px;
+    }
+    li {
+      padding: 5px 0;
+    }
+  }
+}
+/* Single Product page style end */

@@ -1,0 +1,386 @@
+@import "essentials";
+/* Review Slider style start */
+$color_1: #333;
+$color_2: #000;
+$color_3: #ffc60a;
+$color_4: #ffb900;
+$font-family_1: dashicons;
+$font-family_2: unset;
+$background-color_1: #fff;
+$bodyText: #415161;
+
+
+.single-product {
+	.trust-pilot-section {
+		margin: 20px 0;
+	}
+}
+.trust-pilot-section {
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	border: 2px solid #48b9b7;
+	border-radius: 25px;
+	padding-top: 40px;
+	display: inline-block;
+	width: 100%;
+	background-color: $background-color_1;
+}
+.trust-pilot-heading {
+	>h3 {
+		color: $bodyText;
+		font-size: 26px;
+		font-weight: 600;
+		line-height: normal;
+		text-align: center;
+		padding: 0px 10px 15px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+		top: -15px;
+	}
+}
+.trust-reviews-box {
+	text-align: center;
+	margin-bottom: 30px;
+	.h3 {
+		color: $color_2;
+		font-size: 24px;
+		margin: 0 0 12px;
+		line-height: 24px;
+	}
+	.star-rating {
+		.star {
+			font-size: 30px;
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+.single-product.woocommerce {
+	.star-rating {
+		span {
+			color: $color_3;
+		}
+		&:before {
+			font-size: 0 !important;
+		}
+		float: unset !important;
+		overflow: unset !important;
+		position: relative !important;
+		height: unset !important;
+		line-height: unset !important;
+		font-size: unset !important;
+		width: unset !important;
+		font-family: $font-family_2 !important;
+	}
+	.entry-summary {
+		.star-rating {
+			display: none;
+		}
+	}
+}
+.woocommerce-page {
+	.star-rating {
+		span {
+			color: $color_3;
+		}
+	}
+}
+.star-rating {
+	.star {
+		color: $color_4 !important;
+		display: inline-block;
+		font-family: $font-family_1;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		height: 20px;
+		line-height: 1;
+		text-align: center;
+		text-decoration: inherit;
+		vertical-align: top;
+		width: 20px;
+	}
+	.star-full {
+		&:before {
+			content: "\f155";
+		}
+	}
+	.star-half {
+		&:before {
+			content: "\f459";
+		}
+	}
+}
+.review_slider.owl-carousel {
+	opacity: 1;
+	display: block;
+	.owl-item {
+		display: block;
+		visibility: visible !important;
+	}
+}
+ul.review_slider {
+	padding: 0 30px;
+	margin: 0 !important;
+}
+.review_slider {
+	opacity: 1;
+	transition: opacity 1s;
+	display: none;
+	li {
+		// max-width: 375px;
+		width: 100%;
+		margin: 0 10px !important;
+		padding: 0 !important;
+		.glsr-review {
+			max-width: 270px;
+			.glsr-review-title {
+				.glsr-tag-value {
+					font-size: 20px;
+					margin-bottom: 20px;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+	.slick-prev {
+		left: 0;
+		&::before {
+			content: "";
+			position: absolute;
+			transform: rotate(180deg);
+			top: 30%;
+			left: 0;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dddddd' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			height: 20px;
+			width: 20px;
+		}
+	}
+	.slick-next {
+		right: 0;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 30%;
+			right: 0;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23dddddd' viewBox='0 0 320 512'%3E%3C!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath d='M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z'/%3E%3C/svg%3E");
+			background-repeat: no-repeat;
+			height: 20px;
+			width: 20px;
+		}
+	}
+	.glsr-review-content {
+		.glsr-tag-value {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		}
+	}
+}
+.review-item.carousel-cell {
+	.glsr-review-date {
+		display: inline-block;
+		float: right;
+	}
+	.glsr-review-author {
+		display: none;
+	}
+}
+.signle-post-testimonial.left {
+	float: left;
+	width: 25%;
+	padding: 0 15px;
+}
+.signle-post-testimonial.right {
+	float: left;
+	width: 75%;
+	padding-right: 15px;
+}
+#kvhngbfog {
+	margin-top: 80px;
+}
+.max-twelve {
+	.elementor-element {
+		max-width: 1200px !important;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+@media (max-width:1200px) {
+	.trust-pilot-section {
+		padding-bottom: 40px;
+		.signle-post-testimonial.left {
+			width: 100%;
+			padding: 0 15px;
+			.trust-reviews-box {
+				.glsr-summary-wrap {
+					.glsr-summary {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+		.signle-post-testimonial.right {
+			width: 100%;
+			padding: 0 15px;
+		}
+		.review_slider {
+			li {
+				margin: auto;
+			}
+		}
+		.summary-wrap-main {
+			>.glsr-summary {
+				justify-content: center;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+/* Site review CSS */
+.page-id-9989 .entry-header {
+	display: none;
+}
+.page-id-9989 .rating-section {
+    display: flex;
+    align-items: center;
+}
+.page-id-9989 .rating-section__rating-number .glsr-summary-rating span {
+    font-size: 50px;
+    font-weight: normal;
+}
+.page-id-9989 span.rating-section__rating-star-text {
+    line-height: normal;
+}
+.page-id-9989 .glsr-summary-stars .glsr-star {
+    background-size: 3.5rem !important;
+    height: 3.5rem !important;
+    width: 3.5rem !important;
+}
+.page-id-9989 .rating-section__rating-star-text .glsr-summary-text {
+    font-size: 14px;
+    color: #000;
+}
+.page-id-9989 .rating-section__rating-star-text .glsr-summary-text {
+    font-size: 16px;
+}
+.page-id-9989 .percentage-section {
+    width: 35%;
+    margin-left: 20px;
+}
+.page-id-9989 .percentage-section .glsr-summary-percentages {
+    font-size: 13px;
+}
+.page-id-9989 .percentage-section .glsr-bar-label {
+    line-height: 1.6;
+}
+.page-id-9989 .glsr-reviews {
+    display: flex !important;
+    padding: 30px 0;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+.page-id-9989 .glsr-review {
+    flex-basis: 48.50% !important;
+    box-shadow: 0px 7px 10px 0px #ccccca;
+    border: 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    border-left: 4px solid #067e69;
+    text-align: left;
+}
+.page-id-9989 .glsr-review-title,.glsr-review-response-inner strong {
+	color: #415161;
+	h4 {
+		font-weight: 600 !important;
+	}
+}
+.page-id-9989 .glsr-review-author {
+    color: #067e69;
+    border-bottom: 1px solid rgba(0,0,0,.32);
+    width: 100%;
+    padding-bottom: 5px;
+}
+.page-id-9989 nav.navigation {
+    background: transparent;
+    height: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 99;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.page-id-9989 .nav-links {
+    display: flex;
+    align-items: center;
+}
+.page-id-9989 .page-numbers {
+    margin: 0 5px;
+    padding: 10px;
+}
+.page-id-9989 a.prev.page-numbers, a.next.page-numbers {
+    background-color: rgba(0,0,0,.3);
+    color: #000;
+    border-radius: 5px;
+}
+.page-id-9989 a.next.page-numbers:before, a.prev.page-numbers:before {
+    top: 10% !important;
+    left: 40% !important;
+    font-size: 20px !important;
+}
+.page-id-9989 .glsr-default form.glsr-form label.glsr-label {
+    font-size: 14px;
+}
+.page-id-9989 .glsr-default form.glsr-form input.glsr-input, .glsr-default form.glsr-form textarea.glsr-textarea {
+    padding: 15px 10px !important;
+    font-size: 12px;
+}
+.page-id-9989 .glsr-default form.glsr-form [type=submit] {
+    color: #fff !important;
+    background-color: #067e69 !important;
+    padding: 12px !important;
+}
+.page-id-9989 .glsr-default .glsr-summary {
+	max-width: 100%;
+	justify-content: center;
+}
+.page-id-9989 header.col-12{
+	display: none;
+} 
+
+@media screen and (max-width: 1200px) {
+	.page-id-9989 .rating-section {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-basis: 100%;
+	}
+	.page-id-9989 .percentage-section {
+		width: 100%;
+		margin-left: 0;
+		display: flex;
+		justify-content: center;
+	}
+}
+@media screen and (max-width: 767px) {
+	.page-id-9989 .glsr-reviews {
+		flex-wrap: wrap;
+	}
+	.page-id-9989 .glsr-review {
+		flex-basis: 100% !important;
+	}
+	.page-id-9989 .rating-section__rating-star-text .glsr-summary-text {
+		font-size: 15px;
+	}
+	.page-id-9989 .rating-section__rating-number .glsr-summary-rating span {
+		font-size: 35px;
+	}
+	
+}
+/* Site review CSS End */

@@ -1,0 +1,132 @@
+@import "essentials";
+/* Homepage style start */
+body {
+  background-color: #fff;
+}
+.fs-34 {
+  font-size: 2.267rem;
+  line-height: 1.4em;
+  margin-bottom: .7em;
+}
+.fs-30 {
+  font-size: 2rem;
+  line-height: 1.4em;
+  margin-bottom: .7em;
+}
+.fs-18 {
+  font-size: 1.133rem;
+  line-height: 1.6;
+}
+.body-text {
+  color: #415161;
+}
+.heading-border {
+  height: 3px !important;
+  opacity: 1;
+  width: 70px !important;
+  &::before {
+    display: none !important;
+  }
+}
+.front-page {
+  .hero-row {
+    .front-hero-banner {
+      img {
+        width: 100%;
+      }
+    }
+  }
+	.homepage-product-row {
+		.wc-block-grid__product-rating {
+			.star-rating span {
+				&::before {
+					color: #fbb614;
+				}
+			}
+		}
+	}
+  .happy-client-row {
+    .happy-client-inner-row {
+      .happy-client-inner-row-columns {
+        display: flex;
+        gap: 30px;
+        >.wp-block-column {
+          box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, .07);
+          padding: 30px 30px 106px;
+          border-radius: 20px;
+          flex-basis: calc(33.33% - 20px);
+          position: relative;
+          .star-img {
+            max-width: 100px;
+            margin-left: auto;
+          }
+        }
+        .client-row-down  {
+          position: absolute;
+          bottom: 20px;
+          .wp-block-columns {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Homepage Media style */
+@media screen and (max-width: 991px) {
+  .homepage-product-row {
+    li.wc-block-grid__product {
+      flex: 1 0 33.33% !important;
+      max-width: 33.33% !important;
+    }
+  }
+  .happy-client-row {
+    .happy-client-inner-row {
+      .happy-client-inner-row-columns {
+        flex-wrap: wrap;
+        >.wp-block-column {
+          flex-basis: calc(50% - 20px) !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .fs-34 {
+    font-size: 25px;
+  }
+  .fs-30 {
+    font-size: 22px;
+  }
+  .homepage-product-row {
+    li.wc-block-grid__product {
+      flex: 1 0 50% !important;
+      max-width: 50% !important;
+    }
+  }
+  .happy-client-row {
+    .happy-client-inner-row {
+      .happy-client-inner-row-columns {
+        >.wp-block-column {
+          flex-basis: calc(100%) !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .homepage-product-row  {
+    .wc-block-grid__products {
+      display: flex !important;
+      li.wc-block-grid__product {
+        flex: 1 0 50% !important;
+        max-width: 50% !important;
+      }
+    }
+  }
+}
+/* Homepage Media style end */
+/* Homepage style end */
