@@ -74,7 +74,28 @@ body {
     }
   }
 }
-
+.service-box {
+  figure {
+    max-width: 60px;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #ddd;
+    border-radius: 50%;
+    padding: 10px;
+  }
+  .wp-block-media-text__content {
+    margin-left: 15px;
+    p {
+      margin-bottom: 0;
+      line-height: normal;
+      &:first-child {
+        margin-bottom: 5px;
+      }
+    }
+    
+  }
+}
 /* Homepage Media style */
 @media screen and (max-width: 991px) {
   .homepage-product-row {

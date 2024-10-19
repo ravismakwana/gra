@@ -10,7 +10,7 @@ $header_menu_id = $menu_class->get_menu_id( 'asgard-main-menu' );
 
 $header_menus = wp_get_nav_menu_items( $header_menu_id );
 ?>
-<nav class="navbar navbar-expand-lg  navbar-main border-bottom border-opacity-10 border-success bg-primary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg  navbar-main border-bottom border-opacity-10 border-success bg-primary" data-bs-theme="light">
     <div class="container position-relative">
         <div class="mega-menu-title d-flex align-items-center position-relative d-none d-sm-none d-md-block">
             <!-- Offcanvas code is added on footer.php -->
@@ -64,7 +64,7 @@ $header_menus = wp_get_nav_menu_items( $header_menu_id );
 						} else {
 							?>
                             <li class="nav-item dropdown">
-                                <a class="text-uppercase fs-14 nav-link dropdown-toggle px-lg-3 px-md-0 nav-link text-decoration-none fw-semibold"
+                                <a class="text-white text-capitalize fs-14 nav-link dropdown-toggle px-lg-3 px-md-0 nav-link text-decoration-none fw-semibold"
                                    href="<?php echo esc_url( $menu_item->url ); ?>" id="navbarDropdown" role="button"
                                    data-bs-toggle="dropdown" aria-expanded="false">
 									<?php echo esc_html( $menu_item->title ); ?>
